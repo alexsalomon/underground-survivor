@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{49281FAD-2B0C-4767-AE62-9EFC96A64FA7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>undergroundsurvivor</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)obj\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;.\resources\DevIL\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\resources\DevIL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL.lib;ILUT.lib;ILU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\include;.\resources\DevIL\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\resources\DevIL\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;DevIL.lib;ILUT.lib;ILU.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="small.ico" />
+    <None Include="underground-survivor.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\AnimatedSprite.h" />
+    <ClInclude Include="include\AnimationLoader.h" />
+    <ClInclude Include="include\Application.h" />
+    <ClInclude Include="include\Attributes.h" />
+    <ClInclude Include="include\Background.h" />
+    <ClInclude Include="include\Boundary.h" />
+    <ClInclude Include="include\BoundaryManager.h" />
+    <ClInclude Include="include\BoundingBox.h" />
+    <ClInclude Include="include\Bullet.h" />
+    <ClInclude Include="include\BulletFactory.h" />
+    <ClInclude Include="include\Button.h" />
+    <ClInclude Include="include\Character.h" />
+    <ClInclude Include="include\Collisiable.h" />
+    <ClInclude Include="include\CollisionDetector.h" />
+    <ClInclude Include="include\Colour.h" />
+    <ClInclude Include="include\Enemy.h" />
+    <ClInclude Include="include\EnemyGraphicRepresentation.h" />
+    <ClInclude Include="include\EnergyBar.h" />
+    <ClInclude Include="include\Exception.h" />
+    <ClInclude Include="include\FourthWaveSettings.h" />
+    <ClInclude Include="include\GameFont.h" />
+    <ClInclude Include="include\GameSettings.h" />
+    <ClInclude Include="include\GameState.h" />
+    <ClInclude Include="include\GameWorld.h" />
+    <ClInclude Include="include\GraphicRepresentation.h" />
+    <ClInclude Include="include\Image.h" />
+    <ClInclude Include="include\ImageList.h" />
+    <ClInclude Include="include\InvertedBoundingBox.h" />
+    <ClInclude Include="include\List.h" />
+    <ClInclude Include="include\Location.h" />
+    <ClInclude Include="include\MainPlayerStatusPanel.h" />
+    <ClInclude Include="include\MainWindow.h" />
+    <ClInclude Include="include\MenuState.h" />
+    <ClInclude Include="include\Panel.h" />
+    <ClInclude Include="include\Pistol.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\PlayerGraphicRepresentation.h" />
+    <ClInclude Include="include\PlayState.h" />
+    <ClInclude Include="include\Rectangle.h" />
+    <ClInclude Include="include\Renderable.h" />
+    <ClInclude Include="include\StateManager.h" />
+    <ClInclude Include="include\stdafx.h" />
+    <ClInclude Include="include\targetver.h" />
+    <ClInclude Include="include\TextControl.h" />
+    <ClInclude Include="include\Texture.h" />
+    <ClInclude Include="include\TextureManager.h" />
+    <ClInclude Include="include\ThirdWaveSettings.h" />
+    <ClInclude Include="include\Timer.h" />
+    <ClInclude Include="include\Wave.h" />
+    <ClInclude Include="include\Wave1to5.h" />
+    <ClInclude Include="include\Wave6to10.h" />
+    <ClInclude Include="include\WaveManager.h" />
+    <ClInclude Include="include\Weapon.h" />
+    <ClInclude Include="include\Zombie.h" />
+    <ClInclude Include="include\ZombieGraphicRepresentation.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\AnimatedSprite.cpp" />
+    <ClCompile Include="source\AnimationLoader.cpp" />
+    <ClCompile Include="source\Application.cpp" />
+    <ClCompile Include="source\Attributes.cpp" />
+    <ClCompile Include="source\Background.cpp" />
+    <ClCompile Include="source\BoundaryManager.cpp" />
+    <ClCompile Include="source\BoundingBox.cpp" />
+    <ClCompile Include="source\Bullet.cpp" />
+    <ClCompile Include="source\BulletFactory.cpp" />
+    <ClCompile Include="source\Button.cpp" />
+    <ClCompile Include="source\Character.cpp" />
+    <ClCompile Include="source\CollisionDetector.cpp" />
+    <ClCompile Include="source\EnemyGraphicRepresentation.cpp" />
+    <ClCompile Include="source\EnergyBar.cpp" />
+    <ClCompile Include="source\Event.cpp" />
+    <ClCompile Include="source\GameFont.cpp" />
+    <ClCompile Include="source\GameSettings.cpp" />
+    <ClCompile Include="source\GameState.cpp" />
+    <ClCompile Include="source\GameWorld.cpp" />
+    <ClCompile Include="source\GraphicRepresentation.cpp" />
+    <ClCompile Include="source\Image.cpp" />
+    <ClCompile Include="source\ImageList.cpp" />
+    <ClCompile Include="source\InvertedBoundingBox.cpp" />
+    <ClCompile Include="source\List.cpp" />
+    <ClCompile Include="source\main.cpp" />
+    <ClCompile Include="source\MainPlayerStatusPanel.cpp" />
+    <ClCompile Include="source\MainWindow.cpp" />
+    <ClCompile Include="source\MenuState.cpp" />
+    <ClCompile Include="source\Panel.cpp" />
+    <ClCompile Include="source\Pistol.cpp" />
+    <ClCompile Include="source\Player.cpp" />
+    <ClCompile Include="source\PlayerGraphicRepresentation.cpp" />
+    <ClCompile Include="source\PlayState.cpp" />
+    <ClCompile Include="source\StateManager.cpp" />
+    <ClCompile Include="source\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\TextControl.cpp" />
+    <ClCompile Include="source\Texture.cpp" />
+    <ClCompile Include="source\TextureManager.cpp" />
+    <ClCompile Include="source\Timer.cpp" />
+    <ClCompile Include="source\WaveManager.cpp" />
+    <ClCompile Include="source\Zombie.cpp" />
+    <ClCompile Include="source\ZombieGraphicRepresentation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="underground-survivor.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
