@@ -2,7 +2,13 @@ Underground Survivor
 ====================
 
 Underground Survivor is a Windows only top-down shooter game I created while in my second year of university (Jan, 2011). My objective with this project was to learn C++ and how applications/games work by creating a game from scratch. For more information, go to http://alexsalomon.me/projects/underground_survivor.html.
- 
+
+Development
+-------------------
+ - Clone repository to local machine
+ - Open project solution with Visual Studio 2010
+ - Rebuild solution
+
 Playing the game
 ----------------
 To play the game, download all the contents of the `bin/` folder and execute `underground-survivor.exe`
