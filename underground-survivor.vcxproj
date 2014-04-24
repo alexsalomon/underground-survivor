@@ -158,7 +158,6 @@
     <ClCompile Include="source\CollisionDetector.cpp" />
     <ClCompile Include="source\EnemyGraphicRepresentation.cpp" />
     <ClCompile Include="source\EnergyBar.cpp" />
-    <ClCompile Include="source\Event.cpp" />
     <ClCompile Include="source\GameFont.cpp" />
     <ClCompile Include="source\GameSettings.cpp" />
     <ClCompile Include="source\GameState.cpp" />

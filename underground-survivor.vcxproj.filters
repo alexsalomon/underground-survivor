@@ -13,6 +13,66 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Engine Core">
+      <UniqueIdentifier>{e5339a96-024d-4c7f-890a-7d96c071c6e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{ebc43dc6-48ca-46f2-aac0-56e3e50ec06d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collision Detection">
+      <UniqueIdentifier>{df7c4248-f8cc-48b7-bce9-29a6a0322c4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game States">
+      <UniqueIdentifier>{9a87e806-191d-471a-9fa6-8c903f0f1730}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Characters">
+      <UniqueIdentifier>{fa964e54-f764-41e7-a5dd-b4c5420783c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game Objects">
+      <UniqueIdentifier>{4448ed8d-b9d5-472e-8934-a1a402b0a75f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\UI Objects">
+      <UniqueIdentifier>{f151530e-9a2c-46a2-84af-dbb49f75505a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Waves">
+      <UniqueIdentifier>{9b282d1c-1278-41e5-b012-5fcaa2fd3080}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Character Graphical Representations">
+      <UniqueIdentifier>{6288891c-f1cb-4e4d-b957-29c6e314d9ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Helper Classes">
+      <UniqueIdentifier>{3f79cdd0-6bc2-43b1-be74-27de99fce8a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Engine Core">
+      <UniqueIdentifier>{bc6fe63e-7368-4256-af0d-68d3a7b82aa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision Detection">
+      <UniqueIdentifier>{7f1be7e5-0dc8-4ac2-b91b-d4631cba244d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Characters">
+      <UniqueIdentifier>{37a4992b-daa1-4913-9b60-d45d93c545fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Objects">
+      <UniqueIdentifier>{abb6667d-7741-4a35-9949-bbb31a0c6f7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Character Graphical Representations">
+      <UniqueIdentifier>{828259fa-5930-4151-8ce4-e24c2a2b7bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Waves">
+      <UniqueIdentifier>{3e394e17-91ab-42ba-82ca-2ee210c603e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\UI Objects">
+      <UniqueIdentifier>{ddd78087-7831-4a12-9eca-8f39ce39aa2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{4f790a84-de3f-446a-a621-55afa70eb675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game States">
+      <UniqueIdentifier>{3514f93c-a662-49cc-bcce-81f864e3312a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helper Classes">
+      <UniqueIdentifier>{9fa7f8e0-d8c1-4eda-9270-b0576f75fa52}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="small.ico">
@@ -23,298 +83,295 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\AnimatedSprite.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\AnimationLoader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Application.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Attributes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Background.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Boundary.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BoundaryManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BoundingBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Bullet.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\BulletFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Button.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Character.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Collisiable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\CollisionDetector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Colour.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Enemy.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\EnemyGraphicRepresentation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\EnergyBar.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Exception.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\FourthWaveSettings.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\GameFont.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\GameSettings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\GameState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\GameWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\GraphicRepresentation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ImageList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\InvertedBoundingBox.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\List.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Location.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\MainPlayerStatusPanel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\MainWindow.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\MenuState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Panel.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Pistol.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Player.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\PlayerGraphicRepresentation.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\PlayState.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Rectangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Renderable.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game States</Filter>
     </ClInclude>
     <ClInclude Include="include\StateManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlayState.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MenuState.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Application.h">
+      <Filter>Header Files\Engine Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Exception.h">
+      <Filter>Header Files\Engine Core</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MainWindow.h">
+      <Filter>Header Files\Engine Core</Filter>
     </ClInclude>
     <ClInclude Include="include\stdafx.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine Core</Filter>
     </ClInclude>
     <ClInclude Include="include\targetver.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Engine Core</Filter>
     </ClInclude>
-    <ClInclude Include="include\TextControl.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\AnimatedSprite.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\AnimationLoader.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Image.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ImageList.h">
+      <Filter>Header Files\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\Texture.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\TextureManager.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Rendering</Filter>
     </ClInclude>
-    <ClInclude Include="include\ThirdWaveSettings.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Boundary.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\Timer.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\BoundaryManager.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\Wave.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\BoundingBox.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\Wave1to5.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Collisiable.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\Wave6to10.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\CollisionDetector.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\WaveManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\InvertedBoundingBox.h">
+      <Filter>Header Files\Collision Detection</Filter>
     </ClInclude>
-    <ClInclude Include="include\Weapon.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="include\Attributes.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Character.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Enemy.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Player.h">
+      <Filter>Header Files\Characters</Filter>
     </ClInclude>
     <ClInclude Include="include\Zombie.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Background.h">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Bullet.h">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\BulletFactory.h">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Pistol.h">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Weapon.h">
+      <Filter>Header Files\Game Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Button.h">
+      <Filter>Header Files\UI Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EnergyBar.h">
+      <Filter>Header Files\UI Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\FourthWaveSettings.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameFont.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Panel.h">
+      <Filter>Header Files\UI Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Renderable.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\EnemyGraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
+    </ClInclude>
+    <ClInclude Include="include\MainPlayerStatusPanel.h">
+      <Filter>Header Files\UI Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="include\PlayerGraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
     </ClInclude>
     <ClInclude Include="include\ZombieGraphicRepresentation.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Character Graphical Representations</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WaveManager.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Wave6to10.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Wave1to5.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Wave.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ThirdWaveSettings.h">
+      <Filter>Header Files\Waves</Filter>
+    </ClInclude>
+    <ClInclude Include="include\TextControl.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameWorld.h">
+      <Filter>Header Files\Game States</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Timer.h">
+      <Filter>Header Files\Helper Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\List.h">
+      <Filter>Header Files\Helper Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Location.h">
+      <Filter>Header Files\Helper Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Colour.h">
+      <Filter>Header Files\Helper Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Rectangle.h">
+      <Filter>Header Files\Helper Classes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="source\AnimatedSprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\AnimationLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Application.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Attributes.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Background.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\BoundaryManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\BoundingBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Bullet.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\BulletFactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Button.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Character.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\CollisionDetector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\EnemyGraphicRepresentation.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\EnergyBar.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Event.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\GameFont.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="source\GameSettings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="source\AnimatedSprite.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="source\AnimationLoader.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Application.cpp">
+      <Filter>Source Files\Engine Core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Attributes.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Background.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BoundaryManager.cpp">
+      <Filter>Source Files\Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BoundingBox.cpp">
+      <Filter>Source Files\Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Bullet.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\BulletFactory.cpp">
+      <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Button.cpp">
+      <Filter>Source Files\UI Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Character.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\CollisionDetector.cpp">
+      <Filter>Source Files\Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EnemyGraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
+    </ClCompile>
+    <ClCompile Include="source\EnergyBar.cpp">
+      <Filter>Source Files\UI Objects</Filter>
+    </ClCompile>
     <ClCompile Include="source\GameState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="source\GameWorld.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\GraphicRepresentation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="source\Image.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="source\ImageList.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="source\InvertedBoundingBox.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\List.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="source\GraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
     </ClCompile>
     <ClCompile Include="source\main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\MainPlayerStatusPanel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\MainWindow.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Engine Core</Filter>
     </ClCompile>
     <ClCompile Include="source\MenuState.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Panel.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Pistol.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Player.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\PlayerGraphicRepresentation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="source\PlayState.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="source\StateManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\stdafx.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Game States</Filter>
     </ClCompile>
     <ClCompile Include="source\TextControl.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="source\Texture.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="source\TextureManager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="source\Timer.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="source\Panel.cpp">
+      <Filter>Source Files\UI Objects</Filter>
     </ClCompile>
-    <ClCompile Include="source\WaveManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Zombie.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="source\MainPlayerStatusPanel.cpp">
+      <Filter>Source Files\UI Objects</Filter>
     </ClCompile>
     <ClCompile Include="source\ZombieGraphicRepresentation.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Character Graphical Representations</Filter>
+    </ClCompile>
+    <ClCompile Include="source\PlayerGraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
+    </ClCompile>
+    <ClCompile Include="source\WaveManager.cpp">
+      <Filter>Source Files\Waves</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Zombie.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Player.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\InvertedBoundingBox.cpp">
+      <Filter>Source Files\Collision Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameFont.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="source\stdafx.cpp">
+      <Filter>Source Files\Engine Core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\MainWindow.cpp">
+      <Filter>Source Files\Engine Core</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Timer.cpp">
+      <Filter>Source Files\Helper Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\List.cpp">
+      <Filter>Source Files\Helper Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Pistol.cpp">
+      <Filter>Source Files\Game Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
