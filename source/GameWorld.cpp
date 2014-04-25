@@ -9,7 +9,8 @@
 #include "GameFont.h"
 #include "Background.h"
 #include "Player.h"
-#include "Zombie.h"
+#include "ZombiePurple.h"
+#include "ZombieBlue.h"
 #include "Bullet.h"
 #include "Timer.h"
 #include "Location.h"
@@ -150,6 +151,7 @@ void GameWorld::update()
 			m_current_num_of_enemies_to_spawn = m_wave_settings_manager_p->get_num_of_enemies_to_spawn();
 			m_current_state = DISPLAY_WAVE_NUMBER_TO_SCREEN;
 			break;
+
 		case DISPLAY_WAVE_NUMBER_TO_SCREEN:
 			m_draw_new_wave_text = true;
 			if(m_between_waves_timer_p->is_timeout())
@@ -158,11 +160,13 @@ void GameWorld::update()
 				m_current_state = SPAWN_ENEMY; 
 			}
 			break;
+
 		case SPAWN_ENEMY:
 			spawn_enemy();
 			m_spawn_enemy_timer_p->start(WAITING_TIME_BETWEEN_ENEMY_SPAWN);
 			m_current_state = WAIT_TO_SPAWN_NEXT_ENEMY;
 			break;
+
 		case WAIT_TO_SPAWN_NEXT_ENEMY:
 			if(m_spawn_enemy_timer_p->is_timeout() && m_current_num_of_enemies_to_spawn > 0)
 			{
@@ -174,6 +178,7 @@ void GameWorld::update()
 				m_current_state = START_WAVE;
 			}
 			break;
+
 		default:
 			throw Exception("GameWorld::update - Invalid state");
 	}
@@ -181,11 +186,27 @@ void GameWorld::update()
 
 void GameWorld::spawn_enemy()
 {
-	Enemy* enemy_p = new Zombie();
+	Enemy* enemy_p = get_enemy_type();
 	Location* spawning_location = get_random_enemy_spawning_location();
 	enemy_p->set_location(spawning_location);
 	m_enemy_list.push_back(enemy_p);
 	m_current_num_of_enemies_to_spawn--;
+}
+
+Enemy* GameWorld::get_enemy_type()
+{
+	Enemy* enemy_p = NULL;
+
+	if(rand() % 100 < (int)m_wave_settings_manager_p->get_blue_zombies_spawn_rate())
+	{
+		 enemy_p = new ZombieBlue();
+	}
+	else
+	{
+		 enemy_p = new ZombiePurple();
+	}
+
+	return enemy_p;
 }
 
 Location* GameWorld::get_random_enemy_spawning_location()

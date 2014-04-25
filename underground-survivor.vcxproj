@@ -135,8 +135,10 @@
     <ClInclude Include="include\Timer.h" />
     <ClInclude Include="include\WaveManager.h" />
     <ClInclude Include="include\Weapon.h" />
-    <ClInclude Include="include\Zombie.h" />
-    <ClInclude Include="include\ZombieGraphicRepresentation.h" />
+    <ClInclude Include="include\ZombieBlue.h" />
+    <ClInclude Include="include\ZombieBlueGraphicRepresentation.h" />
+    <ClInclude Include="include\ZombiePurple.h" />
+    <ClInclude Include="include\ZombiePurpleGraphicRepresentation.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\AnimatedSprite.cpp" />
@@ -151,6 +153,7 @@
     <ClCompile Include="source\Button.cpp" />
     <ClCompile Include="source\Character.cpp" />
     <ClCompile Include="source\CollisionDetector.cpp" />
+    <ClCompile Include="source\Enemy.cpp" />
     <ClCompile Include="source\EnemyGraphicRepresentation.cpp" />
     <ClCompile Include="source\EnergyBar.cpp" />
     <ClCompile Include="source\GameFont.cpp" />
@@ -180,8 +183,10 @@
     <ClCompile Include="source\TextureManager.cpp" />
     <ClCompile Include="source\Timer.cpp" />
     <ClCompile Include="source\WaveManager.cpp" />
-    <ClCompile Include="source\Zombie.cpp" />
-    <ClCompile Include="source\ZombieGraphicRepresentation.cpp" />
+    <ClCompile Include="source\ZombieBlue.cpp" />
+    <ClCompile Include="source\ZombieBlueGraphicRepresentation.cpp" />
+    <ClCompile Include="source\ZombiePurple.cpp" />
+    <ClCompile Include="source\ZombiePurpleGraphicRepresentation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="underground-survivor.rc" />

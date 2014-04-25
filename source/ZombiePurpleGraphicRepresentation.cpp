@@ -1,8 +1,8 @@
 #include "stdafx.h"
-#include "ZombieGraphicRepresentation.h"
+#include "ZombiePurpleGraphicRepresentation.h"
 #include "GameSettings.h"
 
-ZombieGraphicRepresentation::ZombieGraphicRepresentation(int energy)
+ZombiePurpleGraphicRepresentation::ZombiePurpleGraphicRepresentation(int energy)
 	: EnemyGraphicRepresentation(energy, (int)(GameSettings::get_window_width()*0.05), (int)(GameSettings::get_window_height()*0.083))
 {
 	int animation_width = (int)(GameSettings::get_window_width()*0.0375);		//skeleton = 0.05
@@ -10,11 +10,11 @@ ZombieGraphicRepresentation::ZombieGraphicRepresentation(int energy)
 	initialize(animation_width, animation_height);
 }
 
-ZombieGraphicRepresentation::~ZombieGraphicRepresentation()
+ZombiePurpleGraphicRepresentation::~ZombiePurpleGraphicRepresentation()
 {
 }
 
-void ZombieGraphicRepresentation::load_animations()
+void ZombiePurpleGraphicRepresentation::load_animations()
 {
 	AnimationLoader animation_loader(TEXTURE_PATH, NUMBER_OF_IMAGES_PER_ROW, NUMBER_OF_ROWS_IN_THE_TEXTURE, m_animation_width, m_animation_height);
 	load_standing_animations(animation_loader);
@@ -24,7 +24,7 @@ void ZombieGraphicRepresentation::load_animations()
 	load_dying_animations(animation_loader);
 }
 
-void ZombieGraphicRepresentation::load_standing_animations(AnimationLoader& animation_loader)
+void ZombiePurpleGraphicRepresentation::load_standing_animations(AnimationLoader& animation_loader)
 {
 	m_animated_sprite_p->add_animation("StandDown", animation_loader.get_animation(25, 25));			//(0, 0));
 	m_animated_sprite_p->add_animation("StandLeft", animation_loader.get_animation(37, 37));			//(18, 18));
@@ -32,7 +32,7 @@ void ZombieGraphicRepresentation::load_standing_animations(AnimationLoader& anim
 	m_animated_sprite_p->add_animation("StandRight", animation_loader.get_animation(13, 13));			//(54, 54));
 }
 
-void ZombieGraphicRepresentation::load_walking_animations(AnimationLoader& animation_loader)
+void ZombiePurpleGraphicRepresentation::load_walking_animations(AnimationLoader& animation_loader)
 {
 	m_animated_sprite_p->add_animation("WalkDown", animation_loader.get_animation(24, 26));				//(0, 6));	= Skeleton
 	m_animated_sprite_p->add_animation("WalkLeft", animation_loader.get_animation(36, 38));				//(18, 24));
@@ -40,7 +40,7 @@ void ZombieGraphicRepresentation::load_walking_animations(AnimationLoader& anima
 	m_animated_sprite_p->add_animation("WalkRight", animation_loader.get_animation(12, 14));			//(54, 60));
 }
 
-void ZombieGraphicRepresentation::load_attacking_animations(AnimationLoader& animation_loader)
+void ZombiePurpleGraphicRepresentation::load_attacking_animations(AnimationLoader& animation_loader)
 {
 	m_animated_sprite_p->add_animation("AttackDown", animation_loader.get_animation(25, 25));			//(0, 0));
 	m_animated_sprite_p->add_animation("AttackLeft", animation_loader.get_animation(37, 37));			//(18, 18));
@@ -53,7 +53,7 @@ void ZombieGraphicRepresentation::load_attacking_animations(AnimationLoader& ani
 	//m_animated_sprite_p->add_animation("AttackRight", animation_loader.get_animation(63, 69));
 }
 
-void ZombieGraphicRepresentation::load_receiving_damage_animations(AnimationLoader& animation_loader)
+void ZombiePurpleGraphicRepresentation::load_receiving_damage_animations(AnimationLoader& animation_loader)
 {
 	//m_animated_sprite_p->add_animation("DamagedDown", animation_loader.get_animation(0, 0));
 	//m_animated_sprite_p->add_animation("DamagedLeft", animation_loader.get_animation(18, 18));
@@ -61,7 +61,7 @@ void ZombieGraphicRepresentation::load_receiving_damage_animations(AnimationLoad
 	//m_animated_sprite_p->add_animation("DamagedRight", animation_loader.get_animation(54, 54));
 }
 
-void ZombieGraphicRepresentation::load_dying_animations(AnimationLoader& animation_loader)
+void ZombiePurpleGraphicRepresentation::load_dying_animations(AnimationLoader& animation_loader)
 {
 	//m_animated_sprite_p->add_animation("DeadDown", animation_loader.get_animation(8, 8));
 	//m_animated_sprite_p->add_animation("DeadLeft", animation_loader.get_animation(8, 8));
@@ -69,7 +69,7 @@ void ZombieGraphicRepresentation::load_dying_animations(AnimationLoader& animati
 	//m_animated_sprite_p->add_animation("DeadRight", animation_loader.get_animation(8, 8));
 }
 
-void ZombieGraphicRepresentation::initialize_animation_defaults()
+void ZombiePurpleGraphicRepresentation::initialize_animation_defaults()
 {	
 	m_current_action = "Walk";
 	m_last_direction = "Down";

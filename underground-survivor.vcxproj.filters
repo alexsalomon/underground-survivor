@@ -161,9 +161,6 @@
     <ClInclude Include="include\Player.h">
       <Filter>Header Files\Characters</Filter>
     </ClInclude>
-    <ClInclude Include="include\Zombie.h">
-      <Filter>Header Files\Characters</Filter>
-    </ClInclude>
     <ClInclude Include="include\Background.h">
       <Filter>Header Files\Game Objects</Filter>
     </ClInclude>
@@ -206,9 +203,6 @@
     <ClInclude Include="include\PlayerGraphicRepresentation.h">
       <Filter>Header Files\Character Graphical Representations</Filter>
     </ClInclude>
-    <ClInclude Include="include\ZombieGraphicRepresentation.h">
-      <Filter>Header Files\Character Graphical Representations</Filter>
-    </ClInclude>
     <ClInclude Include="include\TextControl.h">
       <Filter>Header Files\Rendering</Filter>
     </ClInclude>
@@ -232,6 +226,18 @@
     </ClInclude>
     <ClInclude Include="include\WaveManager.h">
       <Filter>Header Files\Game States / Gameplay</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ZombieBlue.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ZombiePurple.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ZombiePurpleGraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ZombieBlueGraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -319,14 +325,8 @@
     <ClCompile Include="source\MainPlayerStatusPanel.cpp">
       <Filter>Source Files\UI Objects</Filter>
     </ClCompile>
-    <ClCompile Include="source\ZombieGraphicRepresentation.cpp">
-      <Filter>Source Files\Character Graphical Representations</Filter>
-    </ClCompile>
     <ClCompile Include="source\PlayerGraphicRepresentation.cpp">
       <Filter>Source Files\Character Graphical Representations</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Zombie.cpp">
-      <Filter>Source Files\Characters</Filter>
     </ClCompile>
     <ClCompile Include="source\Player.cpp">
       <Filter>Source Files\Characters</Filter>
@@ -357,6 +357,21 @@
     </ClCompile>
     <ClCompile Include="source\WaveManager.cpp">
       <Filter>Source Files\Game States / Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Enemy.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombieBlue.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombiePurple.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombieBlueGraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombiePurpleGraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

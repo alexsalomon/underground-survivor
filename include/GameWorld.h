@@ -54,6 +54,7 @@ class GameWorld
 		void deal_with_hit_enemies_if_applicable();
 		void update_enemies();
 		void spawn_enemy();
+		Enemy* get_enemy_type();
 		Location* get_random_enemy_spawning_location();
 		int get_random_index_inside_range(int range);
 		void draw_bullets();
