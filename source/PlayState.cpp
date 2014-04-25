@@ -26,6 +26,16 @@ PlayState::PlayState(StateManager* state_manager_p)
 	initialize_game();																	
 }
 
+void PlayState::set_up_text_control()
+{
+	AddFontResource("fonts/Ghastly Panic.ttf");
+	m_font = new GameFont();
+	m_font->create_font("Ghastly Panic", 150, FW_NORMAL);
+	m_text_control_p = new TextControl(m_font, Rectangle_int(0, GameSettings::get_window_height(), 0, GameSettings::get_window_width()));
+	m_text_control_p->set_alignement(TextControl::Center);
+	m_text_control_p->set_text_colour(&Colour(187, 187, 187));
+}
+
 void PlayState::initialize_game()
 {
 	m_main_panel_p = new MainPlayerStatusPanel(new Rectangle_int(0, (int)(GameSettings::get_window_height()*0.12), 0, GameSettings::get_window_width()), 100);
@@ -35,16 +45,6 @@ void PlayState::initialize_game()
 PlayState::~PlayState()
 {
 	RemoveFontResource("Ghastly Panic.ttf");
-}
-
-void PlayState::set_up_text_control()
-{
-	AddFontResource("fonts/Ghastly Panic.ttf");
-	m_font = new GameFont();
-	m_font->create_font("Ghastly Panic", 150, FW_NORMAL);
-	m_text_control_p = new TextControl(m_font, Rectangle_int(0, GameSettings::get_window_height(), 0, GameSettings::get_window_width()));
-	m_text_control_p->set_alignement(TextControl::Center);
-	m_text_control_p->set_text_colour(&Colour(187, 187, 187));
 }
 
 void PlayState::reset()

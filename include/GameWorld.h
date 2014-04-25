@@ -22,6 +22,15 @@ class GameWorld
 	typedef std::list<Enemy*>::iterator EnemyListIterator;
 	typedef std::list<Bullet*>::iterator BulletListIterator;
 
+	typedef enum State
+	{
+		INVALID_STATE = -1,
+		START_WAVE,
+		DISPLAY_WAVE_NUMBER_TO_SCREEN,
+		SPAWN_ENEMY,
+		WAIT_TO_SPAWN_NEXT_ENEMY
+	}State;
+
 	public:
 		GameWorld(PlayState* play_state_p, Panel* main_panel_p);
 		~GameWorld();
@@ -44,9 +53,7 @@ class GameWorld
 		void update_flying_bullets();
 		void deal_with_hit_enemies_if_applicable();
 		void update_enemies();
-		void update_waves();
-		void spawn_enemy_if_applicable();
-		void create_enemy();
+		void spawn_enemy();
 		Location* get_random_enemy_spawning_location();
 		int get_random_index_inside_range(int range);
 		void draw_bullets();
@@ -67,8 +74,11 @@ class GameWorld
 		GameFont* m_font;
 		TextControl* m_text_control_p;
 		
-		bool m_should_bullet_be_fired;
 		Location* m_bullet_destination_p;
+		State m_current_state;
+		bool m_should_bullet_be_fired;
+		bool m_draw_new_wave_text;
+		int m_current_num_of_enemies_to_spawn;
 };
 
 #endif

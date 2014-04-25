@@ -22,9 +22,6 @@
     <Filter Include="Header Files\Collision Detection">
       <UniqueIdentifier>{df7c4248-f8cc-48b7-bce9-29a6a0322c4e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Game States">
-      <UniqueIdentifier>{9a87e806-191d-471a-9fa6-8c903f0f1730}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Characters">
       <UniqueIdentifier>{fa964e54-f764-41e7-a5dd-b4c5420783c5}</UniqueIdentifier>
     </Filter>
@@ -67,11 +64,14 @@
     <Filter Include="Source Files\Rendering">
       <UniqueIdentifier>{4f790a84-de3f-446a-a621-55afa70eb675}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Game States">
-      <UniqueIdentifier>{3514f93c-a662-49cc-bcce-81f864e3312a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Helper Classes">
       <UniqueIdentifier>{9fa7f8e0-d8c1-4eda-9270-b0576f75fa52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game States / Gameplay">
+      <UniqueIdentifier>{3514f93c-a662-49cc-bcce-81f864e3312a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game States / Gameplay">
+      <UniqueIdentifier>{9a87e806-191d-471a-9fa6-8c903f0f1730}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -87,16 +87,16 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\GameState.h">
-      <Filter>Header Files\Game States</Filter>
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="include\StateManager.h">
-      <Filter>Header Files\Game States</Filter>
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="include\PlayState.h">
-      <Filter>Header Files\Game States</Filter>
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="include\MenuState.h">
-      <Filter>Header Files\Game States</Filter>
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="include\Application.h">
       <Filter>Header Files\Engine Core</Filter>
@@ -185,9 +185,6 @@
     <ClInclude Include="include\EnergyBar.h">
       <Filter>Header Files\UI Objects</Filter>
     </ClInclude>
-    <ClInclude Include="include\FourthWaveSettings.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
     <ClInclude Include="include\GameFont.h">
       <Filter>Header Files\Rendering</Filter>
     </ClInclude>
@@ -212,26 +209,11 @@
     <ClInclude Include="include\ZombieGraphicRepresentation.h">
       <Filter>Header Files\Character Graphical Representations</Filter>
     </ClInclude>
-    <ClInclude Include="include\WaveManager.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Wave6to10.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Wave1to5.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Wave.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
-    <ClInclude Include="include\ThirdWaveSettings.h">
-      <Filter>Header Files\Waves</Filter>
-    </ClInclude>
     <ClInclude Include="include\TextControl.h">
       <Filter>Header Files\Rendering</Filter>
     </ClInclude>
     <ClInclude Include="include\GameWorld.h">
-      <Filter>Header Files\Game States</Filter>
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
     <ClInclude Include="include\Timer.h">
       <Filter>Header Files\Helper Classes</Filter>
@@ -247,6 +229,9 @@
     </ClInclude>
     <ClInclude Include="include\Rectangle.h">
       <Filter>Header Files\Helper Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\WaveManager.h">
+      <Filter>Header Files\Game States / Gameplay</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -296,10 +281,7 @@
       <Filter>Source Files\UI Objects</Filter>
     </ClCompile>
     <ClCompile Include="source\GameState.cpp">
-      <Filter>Source Files\Game States</Filter>
-    </ClCompile>
-    <ClCompile Include="source\GameWorld.cpp">
-      <Filter>Source Files\Game States</Filter>
+      <Filter>Source Files\Game States / Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="source\Image.cpp">
       <Filter>Source Files\Rendering</Filter>
@@ -314,13 +296,13 @@
       <Filter>Source Files\Engine Core</Filter>
     </ClCompile>
     <ClCompile Include="source\MenuState.cpp">
-      <Filter>Source Files\Game States</Filter>
+      <Filter>Source Files\Game States / Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="source\PlayState.cpp">
-      <Filter>Source Files\Game States</Filter>
+      <Filter>Source Files\Game States / Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="source\StateManager.cpp">
-      <Filter>Source Files\Game States</Filter>
+      <Filter>Source Files\Game States / Gameplay</Filter>
     </ClCompile>
     <ClCompile Include="source\TextControl.cpp">
       <Filter>Source Files\Rendering</Filter>
@@ -342,9 +324,6 @@
     </ClCompile>
     <ClCompile Include="source\PlayerGraphicRepresentation.cpp">
       <Filter>Source Files\Character Graphical Representations</Filter>
-    </ClCompile>
-    <ClCompile Include="source\WaveManager.cpp">
-      <Filter>Source Files\Waves</Filter>
     </ClCompile>
     <ClCompile Include="source\Zombie.cpp">
       <Filter>Source Files\Characters</Filter>
@@ -372,6 +351,12 @@
     </ClCompile>
     <ClCompile Include="source\Pistol.cpp">
       <Filter>Source Files\Game Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="source\GameWorld.cpp">
+      <Filter>Source Files\Game States / Gameplay</Filter>
+    </ClCompile>
+    <ClCompile Include="source\WaveManager.cpp">
+      <Filter>Source Files\Game States / Gameplay</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

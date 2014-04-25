@@ -16,7 +16,7 @@
 #include "Colour.h"
 
 GameWorld::GameWorld(PlayState* play_state_p, Panel* main_panel_p)
-	: m_play_state_p(play_state_p), m_main_panel_p(main_panel_p), m_enemy_list(), m_bullet_list(), m_font(NULL), m_text_control_p(NULL), m_bullet_destination_p(NULL), m_should_bullet_be_fired(false)
+	: m_play_state_p(play_state_p), m_main_panel_p(main_panel_p), m_enemy_list(), m_bullet_list(), m_font(NULL), m_text_control_p(NULL), m_bullet_destination_p(NULL), m_should_bullet_be_fired(false), m_draw_new_wave_text(false), m_current_num_of_enemies_to_spawn(1)
 {
 	m_background_p = new Background();
 	m_player_1_p = new Player();
@@ -61,8 +61,7 @@ void GameWorld::destroy_enemies()
 
 void GameWorld::initialize_world()
 {
-	m_spawn_enemy_timer_p->start(m_wave_settings_manager_p->get_waiting_time_between_waves());
-	m_between_waves_timer_p->start(m_wave_settings_manager_p->get_waiting_time_between_waves());
+	m_current_state = START_WAVE;
 	set_up_wave_text_control();
 }
 
@@ -80,14 +79,12 @@ void GameWorld::pause()
 {
 	m_spawn_enemy_timer_p->pause();
 	m_between_waves_timer_p->pause();
-	m_wave_settings_manager_p->pause();
 }
 
 void GameWorld::resume()
 {
 	m_spawn_enemy_timer_p->resume();
 	m_between_waves_timer_p->resume();
-	m_wave_settings_manager_p->resume();
 }
 
 void GameWorld::on_keyup(WPARAM w_param)
@@ -144,10 +141,73 @@ void GameWorld::update()
 	m_player_1_p->update(m_background_p);
 	update_bullets();
 	update_enemies();
-	update_waves();
-
-	spawn_enemy_if_applicable();
 	create_bullets_if_applicable();
+
+	switch(m_current_state)
+	{
+		case START_WAVE:
+			m_between_waves_timer_p->start(m_wave_settings_manager_p->get_waiting_time_between_waves());
+			m_current_num_of_enemies_to_spawn = m_wave_settings_manager_p->get_num_of_enemies_to_spawn();
+			m_current_state = DISPLAY_WAVE_NUMBER_TO_SCREEN;
+			break;
+		case DISPLAY_WAVE_NUMBER_TO_SCREEN:
+			m_draw_new_wave_text = true;
+			if(m_between_waves_timer_p->is_timeout())
+			{
+				m_draw_new_wave_text = false;
+				m_current_state = SPAWN_ENEMY; 
+			}
+			break;
+		case SPAWN_ENEMY:
+			spawn_enemy();
+			m_spawn_enemy_timer_p->start(WAITING_TIME_BETWEEN_ENEMY_SPAWN);
+			m_current_state = WAIT_TO_SPAWN_NEXT_ENEMY;
+			break;
+		case WAIT_TO_SPAWN_NEXT_ENEMY:
+			if(m_spawn_enemy_timer_p->is_timeout() && m_current_num_of_enemies_to_spawn > 0)
+			{
+				m_current_state = SPAWN_ENEMY;
+			}
+			else if(m_current_num_of_enemies_to_spawn == 0 && m_enemy_list.empty())
+			{
+				m_wave_settings_manager_p->next_wave();
+				m_current_state = START_WAVE;
+			}
+			break;
+		default:
+			throw Exception("GameWorld::update - Invalid state");
+	}
+}
+
+void GameWorld::spawn_enemy()
+{
+	Enemy* enemy_p = new Zombie();
+	Location* spawning_location = get_random_enemy_spawning_location();
+	enemy_p->set_location(spawning_location);
+	m_enemy_list.push_back(enemy_p);
+	m_current_num_of_enemies_to_spawn--;
+}
+
+Location* GameWorld::get_random_enemy_spawning_location()
+{
+	try
+	{
+		Location* random_location = NULL;
+		int range = m_wave_settings_manager_p->get_num_of_enemy_spawning_locations();
+		int index = get_random_index_inside_range(range);
+		random_location = m_background_p->get_enemy_spawning_location(index);
+
+		return random_location;
+	}
+	catch(...)
+	{
+		throw "Exception inside function PlayState::get_random_enemy_spawning_location()";
+	}
+}
+
+int GameWorld::get_random_index_inside_range(int range)
+{
+	return rand() % range;
 }
 
 void GameWorld::create_bullets_if_applicable()
@@ -160,14 +220,6 @@ void GameWorld::create_bullets_if_applicable()
 		{
 			m_bullet_list.push_back(bullet_p);
 		}
-	}
-}
-
-void GameWorld::update_waves()
-{
-	if(m_wave_settings_manager_p->change_waves_if_applicable(m_enemy_list.empty()))
-	{
-		m_between_waves_timer_p->start(m_wave_settings_manager_p->get_waiting_time_between_waves());
 	}
 }
 
@@ -260,45 +312,6 @@ void GameWorld::update_enemies()
 	}
 }
 
-void GameWorld::spawn_enemy_if_applicable()
-{
-	if(!m_wave_settings_manager_p->is_ready_to_change_waves() && m_spawn_enemy_timer_p->is_timeout() && m_between_waves_timer_p->is_timeout())
-	{
-		create_enemy();
-		m_spawn_enemy_timer_p->start(WAITING_TIME_BETWEEN_ENEMY_SPAWN);
-	}
-}
-
-void GameWorld::create_enemy()
-{
-	Enemy* enemy_p = new Zombie();
-	Location* spawning_location = get_random_enemy_spawning_location();
-	enemy_p->set_location(spawning_location);
-	m_enemy_list.push_back(enemy_p);
-}
-
-Location* GameWorld::get_random_enemy_spawning_location()
-{
-	try
-	{
-		Location* random_location = NULL;
-		int range = m_wave_settings_manager_p->get_num_of_enemy_spawning_locations();
-		int index = get_random_index_inside_range(range);
-		random_location = m_background_p->get_enemy_spawning_location(index);
-
-		return random_location;
-	}
-	catch(...)
-	{
-		throw "Exception inside function PlayState::get_random_enemy_spawning_location()";
-	}
-}
-
-int GameWorld::get_random_index_inside_range(int range)
-{
-	return rand() % range;
-}
-
 void GameWorld::draw()
 {
 	m_background_p->draw();
@@ -326,7 +339,7 @@ void GameWorld::draw_enemies()
 
 void GameWorld::draw_new_wave_text_if_applicable()
 {
-	if(m_between_waves_timer_p->is_running())
+	if(m_draw_new_wave_text)
 	{
 		std::stringstream wave_text_stream;
 		wave_text_stream << "Wave " << m_wave_settings_manager_p->get_current_wave_number();

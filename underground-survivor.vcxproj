@@ -106,7 +106,6 @@
     <ClInclude Include="include\EnemyGraphicRepresentation.h" />
     <ClInclude Include="include\EnergyBar.h" />
     <ClInclude Include="include\Exception.h" />
-    <ClInclude Include="include\FourthWaveSettings.h" />
     <ClInclude Include="include\GameFont.h" />
     <ClInclude Include="include\GameSettings.h" />
     <ClInclude Include="include\GameState.h" />
@@ -133,11 +132,7 @@
     <ClInclude Include="include\TextControl.h" />
     <ClInclude Include="include\Texture.h" />
     <ClInclude Include="include\TextureManager.h" />
-    <ClInclude Include="include\ThirdWaveSettings.h" />
     <ClInclude Include="include\Timer.h" />
-    <ClInclude Include="include\Wave.h" />
-    <ClInclude Include="include\Wave1to5.h" />
-    <ClInclude Include="include\Wave6to10.h" />
     <ClInclude Include="include\WaveManager.h" />
     <ClInclude Include="include\Weapon.h" />
     <ClInclude Include="include\Zombie.h" />
