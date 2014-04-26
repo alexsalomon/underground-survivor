@@ -67,3 +67,15 @@ unsigned int WaveManager::get_blue_zombies_spawn_rate()
 
 	return rate;
 }
+
+unsigned int WaveManager::get_grunt_purple_zombies_spawn_rate()
+{
+	unsigned int rate = GRUNT_PURPLE_ZOMBIES_BASE_SPAWN_RATE;
+
+	if(m_current_wave_number <= 5)
+	{
+		rate = 0;
+	}
+
+	return rate;
+}

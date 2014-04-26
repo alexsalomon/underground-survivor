@@ -5,7 +5,7 @@
 ZombieBlueGraphicRepresentation::ZombieBlueGraphicRepresentation(int energy)
 	: EnemyGraphicRepresentation(energy, (int)(GameSettings::get_window_width()*0.05), (int)(GameSettings::get_window_height()*0.083))
 {
-	int animation_width = (int)(GameSettings::get_window_width()*0.0375);		//skeleton = 0.05
+	int animation_width = (int)(GameSettings::get_window_width()*0.0375);
 	int animation_height = (int)(GameSettings::get_window_height()*0.083);
 	initialize(animation_width, animation_height);
 }

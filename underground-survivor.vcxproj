@@ -137,6 +137,8 @@
     <ClInclude Include="include\Weapon.h" />
     <ClInclude Include="include\ZombieBlue.h" />
     <ClInclude Include="include\ZombieBlueGraphicRepresentation.h" />
+    <ClInclude Include="include\ZombieGruntPurple.h" />
+    <ClInclude Include="include\ZombieGruntPurpleGraphicRepresentation.h" />
     <ClInclude Include="include\ZombiePurple.h" />
     <ClInclude Include="include\ZombiePurpleGraphicRepresentation.h" />
   </ItemGroup>
@@ -185,6 +187,8 @@
     <ClCompile Include="source\WaveManager.cpp" />
     <ClCompile Include="source\ZombieBlue.cpp" />
     <ClCompile Include="source\ZombieBlueGraphicRepresentation.cpp" />
+    <ClCompile Include="source\ZombieGruntPurple.cpp" />
+    <ClCompile Include="source\ZombieGruntPurpleGraphicRepresentation.cpp" />
     <ClCompile Include="source\ZombiePurple.cpp" />
     <ClCompile Include="source\ZombiePurpleGraphicRepresentation.cpp" />
   </ItemGroup>

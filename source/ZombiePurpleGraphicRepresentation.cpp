@@ -26,31 +26,26 @@ void ZombiePurpleGraphicRepresentation::load_animations()
 
 void ZombiePurpleGraphicRepresentation::load_standing_animations(AnimationLoader& animation_loader)
 {
-	m_animated_sprite_p->add_animation("StandDown", animation_loader.get_animation(25, 25));			//(0, 0));
-	m_animated_sprite_p->add_animation("StandLeft", animation_loader.get_animation(37, 37));			//(18, 18));
-	m_animated_sprite_p->add_animation("StandUp", animation_loader.get_animation(1, 1));				//(36, 36));
-	m_animated_sprite_p->add_animation("StandRight", animation_loader.get_animation(13, 13));			//(54, 54));
+	m_animated_sprite_p->add_animation("StandDown", animation_loader.get_animation(25, 25));
+	m_animated_sprite_p->add_animation("StandLeft", animation_loader.get_animation(37, 37));
+	m_animated_sprite_p->add_animation("StandUp", animation_loader.get_animation(1, 1));	
+	m_animated_sprite_p->add_animation("StandRight", animation_loader.get_animation(13, 13));
 }
 
 void ZombiePurpleGraphicRepresentation::load_walking_animations(AnimationLoader& animation_loader)
 {
-	m_animated_sprite_p->add_animation("WalkDown", animation_loader.get_animation(24, 26));				//(0, 6));	= Skeleton
-	m_animated_sprite_p->add_animation("WalkLeft", animation_loader.get_animation(36, 38));				//(18, 24));
-	m_animated_sprite_p->add_animation("WalkUp", animation_loader.get_animation(0, 2));					//(36, 42));
-	m_animated_sprite_p->add_animation("WalkRight", animation_loader.get_animation(12, 14));			//(54, 60));
+	m_animated_sprite_p->add_animation("WalkDown", animation_loader.get_animation(24, 26));	
+	m_animated_sprite_p->add_animation("WalkLeft", animation_loader.get_animation(36, 38));	
+	m_animated_sprite_p->add_animation("WalkUp", animation_loader.get_animation(0, 2));		
+	m_animated_sprite_p->add_animation("WalkRight", animation_loader.get_animation(12, 14));
 }
 
 void ZombiePurpleGraphicRepresentation::load_attacking_animations(AnimationLoader& animation_loader)
 {
-	m_animated_sprite_p->add_animation("AttackDown", animation_loader.get_animation(25, 25));			//(0, 0));
-	m_animated_sprite_p->add_animation("AttackLeft", animation_loader.get_animation(37, 37));			//(18, 18));
-	m_animated_sprite_p->add_animation("AttackUp", animation_loader.get_animation(1, 1));				//(36, 36));
+	m_animated_sprite_p->add_animation("AttackDown", animation_loader.get_animation(25, 25));
+	m_animated_sprite_p->add_animation("AttackLeft", animation_loader.get_animation(37, 37));
+	m_animated_sprite_p->add_animation("AttackUp", animation_loader.get_animation(1, 1));	
 	m_animated_sprite_p->add_animation("AttackRight", animation_loader.get_animation(13, 13));
-
-	//m_animated_sprite_p->add_animation("AttackDown", animation_loader.get_animation(9, 15));
-	//m_animated_sprite_p->add_animation("AttackLeft", animation_loader.get_animation(27, 33));
-	//m_animated_sprite_p->add_animation("AttackUp", animation_loader.get_animation(45, 51));
-	//m_animated_sprite_p->add_animation("AttackRight", animation_loader.get_animation(63, 69));
 }
 
 void ZombiePurpleGraphicRepresentation::load_receiving_damage_animations(AnimationLoader& animation_loader)

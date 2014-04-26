@@ -10,6 +10,7 @@
 #include "Background.h"
 #include "Player.h"
 #include "ZombiePurple.h"
+#include "ZombieGruntPurple.h"
 #include "ZombieBlue.h"
 #include "Bullet.h"
 #include "Timer.h"
@@ -200,6 +201,10 @@ Enemy* GameWorld::get_enemy_type()
 	if(rand() % 100 < (int)m_wave_settings_manager_p->get_blue_zombies_spawn_rate())
 	{
 		 enemy_p = new ZombieBlue();
+	}
+	else if(rand() % 100 < (int)m_wave_settings_manager_p->get_grunt_purple_zombies_spawn_rate())
+	{
+		 enemy_p = new ZombieGruntPurple();
 	}
 	else
 	{

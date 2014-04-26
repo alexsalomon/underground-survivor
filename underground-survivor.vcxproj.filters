@@ -239,6 +239,12 @@
     <ClInclude Include="include\ZombieBlueGraphicRepresentation.h">
       <Filter>Header Files\Character Graphical Representations</Filter>
     </ClInclude>
+    <ClInclude Include="include\ZombieGruntPurple.h">
+      <Filter>Header Files\Characters</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ZombieGruntPurpleGraphicRepresentation.h">
+      <Filter>Header Files\Character Graphical Representations</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="source\GameSettings.cpp">
@@ -371,6 +377,12 @@
       <Filter>Source Files\Character Graphical Representations</Filter>
     </ClCompile>
     <ClCompile Include="source\ZombiePurpleGraphicRepresentation.cpp">
+      <Filter>Source Files\Character Graphical Representations</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombieGruntPurple.cpp">
+      <Filter>Source Files\Characters</Filter>
+    </ClCompile>
+    <ClCompile Include="source\ZombieGruntPurpleGraphicRepresentation.cpp">
       <Filter>Source Files\Character Graphical Representations</Filter>
     </ClCompile>
   </ItemGroup>
